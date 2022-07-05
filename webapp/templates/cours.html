@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Courses
+{% endblock %}
+
+{% block content %}
+
+<br>
+<h1>Videos regarding this Cours</h1>
+<br>
+
+<table class="table table-hover table-dark">
+    <thead>
+        <tr>
+            <!-- Your Columns HERE -->
+            <th scope="col">Id</th>
+            <th scope="col">Code</th>
+            <th scope="col">Name</th>
+            <th scope="col">Video</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Your rows inside the table HERE: -->
+            {% for item in items %}
+                <tr>
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.code }}</td>
+                    <td>{{ item.name }}</td>
+                    <td> <a href="{{ url_for('download',Id=item.id) }}"><input type=”button” value=Watch></a> 
+                </tr>
+            {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

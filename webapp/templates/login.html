@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Login Page
+{% endblock %}
+
+{% block content %}
+    <br>
+    <h1>Login Page</h1>
+    <br>
+
+    <body class="text-center">
+        <div class="container">
+            <form method="POST" class="form-signin" style="color: rgb(234, 235, 170);">
+                
+                {{ form.hidden_tag() }}
+
+                {{ form.Code.label() }}
+                {{ form.Code(class="form-control", placeholder="Enter StudentID") }}
+                
+                {{ form.Password.label() }}
+                {{ form.Password(class="form-control", placeholder="Enter Password") }}
+
+                <br>
+                {{ form.Submit(class="btn btn-lg btn-block btn-primary") }}
+                
+            </form>
+        </div>
+    </body>
+
+{% endblock %}

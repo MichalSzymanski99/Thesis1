@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Video Upload
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+    <h1>Upload a video</h1>
+    <form method="POST" action="/uploading" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="inputFile">Upload a video</label>
+        <input type="file" name="inputFile">
+    </div>
+    <button type="submit" class="btn btn-lg btn-block btn-primary">Submit</button>
+    </form>
+</div>
+
+
+{% endblock %}

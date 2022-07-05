@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Admin Page
+{% endblock %}
+
+{% block content %}
+    <br>
+    <h1>User Registration</h1>
+    <br>
+
+    <body class="text-center">
+        <div class="container">
+            <form method="POST" class="form-register" style="color: rgb(234, 235, 170);">
+                {{ form.hidden_tag() }}
+                    
+                {{ form.Name.label() }}
+                {{ form.Name(class="form-control", placeholder="Enter Name") }}
+
+                {{ form.Surname.label() }}
+                {{ form.Surname(class="form-control", placeholder="Enter Surname") }}
+                
+                {{ form.Code.label() }}
+                {{ form.Code(class="form-control", placeholder="Enter UserID") }}
+                
+                {{ form.Semester.label() }}
+                {{ form.Semester(class="form-control", placeholder="Enter Semester") }}
+                
+                {{ form.Area.label() }}
+                {{ form.Area(class="form-control", placeholder="Enter Area") }}
+                
+                {{ form.Password1.label() }}
+                {{ form.Password1(class="form-control", placeholder="Enter Password") }}
+                
+                {{ form.Password2.label() }}
+                {{ form.Password2(class="form-control", placeholder="Confirm Password") }}
+
+                <br>
+                {{ form.Submit(class="btn btn-lg btn-block btn-primary") }}
+                
+            </form>
+        </div>
+    </body>
+
+{% endblock %}
