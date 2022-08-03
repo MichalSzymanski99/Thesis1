@@ -32,7 +32,7 @@ def courses_page():
 @app.route('/admin', methods=['GET', 'POST'])
 def admin_page():
     if(current_user.is_authenticated):
-        if(current_user.Code == '666666'):
+        if(current_user.Code == 'ADMIN'):
             form = RegisterForm()
             if form.validate_on_submit():
                 student_to_create = Student(Name=form.Name.data, Surname=form.Surname.data, Code=form.Code.data,
